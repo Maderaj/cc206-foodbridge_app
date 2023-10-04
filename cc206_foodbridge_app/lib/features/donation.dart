@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Donation extends StatelessWidget{
-  const Donation({super.key});
+class Donation extends StatelessWidget {
+  const Donation({Key? key}) : super(key: key);
 
+class Donation extends StatelessWidget {
+  const Donation({super.key});
+  
 @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -87,6 +90,5 @@ class Donation extends StatelessWidget{
 }
   void main(){
     runApp(MaterialApp(
-    home: Donation(),
+      home: Donation(),
     ));
-  }
