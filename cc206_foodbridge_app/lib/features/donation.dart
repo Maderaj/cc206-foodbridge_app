@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Donation extends StatelessWidget {
-  const Donation({Key? key}) : super(key: key);
-
-class Donation extends StatelessWidget {
   const Donation({super.key});
   
 @override
