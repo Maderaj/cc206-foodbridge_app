@@ -9,6 +9,10 @@ void main() {
 class Donation extends StatelessWidget {
   const Donation({Key? key}) : super(key: key);
 
+class Donation extends StatelessWidget {
+  const Donation({super.key});
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +50,8 @@ class Donation extends StatelessWidget {
                   color: Colors.blue,
                 ),
                 onPressed: () {
-                  // Add functionality for the add button
+                 
+
                 },
               ),
               Text(
@@ -63,16 +68,15 @@ class Donation extends StatelessWidget {
                   color: Colors.blue,
                 ),
                 onPressed: () {
-                  // Add functionality for the remove button
+
                 },
               ),
             ],
           ),
+
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              // Add functionality for the continue button
-              // For example, navigate to the next page or tab.
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue,
@@ -85,5 +89,14 @@ class Donation extends StatelessWidget {
         ],
       ),
     );
+        ],
+      ),
+    );
+  }
+
+  void main() {
+    runApp(MaterialApp(
+      home: Donation(),
+    ));
   }
 }
