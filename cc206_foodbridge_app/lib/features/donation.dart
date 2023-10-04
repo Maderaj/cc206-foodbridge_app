@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MaterialApp(
+    home: Donation(),
+  ));
+}
+
+class Donation extends StatelessWidget {
+  const Donation({Key? key}) : super(key: key);
+
 class Donation extends StatelessWidget {
   const Donation({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +50,8 @@ class Donation extends StatelessWidget {
                   color: Colors.blue,
                 ),
                 onPressed: () {
-                  //actions
+                 
+
                 },
               ),
               Text(
@@ -57,11 +68,27 @@ class Donation extends StatelessWidget {
                   color: Colors.blue,
                 ),
                 onPressed: () {
-                  //actions
+
                 },
               ),
             ],
           ),
+
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+            ),
+            child: Text(
+              "Continue",
+              style: TextStyle(color: Colors.black),
+            ),
+          ),
+        ],
+      ),
+    );
         ],
       ),
     );
