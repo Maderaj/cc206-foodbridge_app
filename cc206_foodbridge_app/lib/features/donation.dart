@@ -7,15 +7,26 @@ void main() {
 }
 
 class Donation extends StatelessWidget {
-  const Donation({Key? key}) : super(key: key);
-
-class Donation extends StatelessWidget {
   const Donation({super.key});
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 5, 230, 230),  
+          centerTitle: true,
+          title: Text('Donation',
+          style:TextStyle(color: Colors.black),
+          ),  
+          leading: IconButton(
+            icon: Icon(Icons.close,
+            color: Colors.black,),
+            onPressed: () {
+             
+            },
+          ),
+        ),
       body: Column(
         children: [
           Image.network(
@@ -89,9 +100,7 @@ class Donation extends StatelessWidget {
         ],
       ),
     );
-        ],
-      ),
-    );
+   
   }
 
   void main() {
