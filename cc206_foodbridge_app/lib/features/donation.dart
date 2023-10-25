@@ -20,7 +20,7 @@ class Donation extends StatelessWidget {
           style:TextStyle(color: Colors.black),
           ),  
           leading: IconButton(
-            icon: Icon(Icons.close,
+            icon: Icon(Icons.arrow_back,
             color: Colors.black,),
             onPressed: () {
              
