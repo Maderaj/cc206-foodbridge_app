@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(MaterialApp(
     home: Donation(),
@@ -9,7 +8,6 @@ void main() {
 
 class Donation extends StatelessWidget {
   const Donation({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,6 @@ class Donation extends StatelessWidget {
             icon: Icon(Icons.arrow_back,
             color: Colors.black,),
             onPressed: () {
-             
             },
           ),
         ),
