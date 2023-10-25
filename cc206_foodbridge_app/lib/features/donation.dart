@@ -1,5 +1,48 @@
 import 'package:flutter/material.dart';
 
+
+void main() {
+  runApp(MaterialApp(
+    home: Donation(),
+  ));
+}
+
+class Donation extends StatelessWidget {
+  const Donation({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+       appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 5, 230, 230),  
+          centerTitle: true,
+          title: Text('Donation',
+          style:TextStyle(color: Colors.black),
+          ),  
+          leading: IconButton(
+            icon: Icon(Icons.close,
+            color: Colors.black,),
+            onPressed: () {
+             
+            },
+          ),
+        ),
+      body: Column(
+        children: [
+          Image.network(
+            "https://tse3.mm.bing.net/th?id=OIP.xgn6bhRgPCVyXMiXh16bXAAAAA&pid=Api",
+            width: 200,
+            height: 200,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.favorite,
+                color: Colors.red,
+                size: 32,
+
 class Donation extends StatelessWidget {
   const Donation({Key? key});
 
@@ -177,10 +220,17 @@ class Donation extends StatelessWidget {
                 ),
               ],
             ),
+
+          ),
+        ],
+      ),
+    );
+
           ],
         ),
       ),
     );
+
   }
 }
 
