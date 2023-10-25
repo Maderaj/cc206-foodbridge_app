@@ -19,6 +19,74 @@ class Donation extends StatelessWidget {
               ),
             ),
             Positioned(
+              top: 250,
+              right: 22,
+              child: IconButton(
+                icon: Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                  size: 32,
+                ),
+                onPressed: () {
+                  // Handle button tap here
+                },
+              ),
+            ),
+            Column(
+              children: [
+                SizedBox(height: 310), // To push content below the image
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Guava Pineapple Juice',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15),
+                Text(
+                  'True Juice, a combination of natural guava pineapple Juice.',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.remove,
+                        size: 25,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {
+                        // Handle button tap here
+                      },
+                    ),
+                    Text(
+                      '100',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    IconButton(
+                      icon: Icon(
+                        Icons.add,
+                        size: 25,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {
+                        // Handle button tap here
+                      },
+                    ),
+                  ],
+                ),
               top: 250, // Adjust the top position as needed
               right: 20, // Adjust the right position as needed
               child: Center(
