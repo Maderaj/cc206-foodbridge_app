@@ -1,44 +1,69 @@
 import 'package:flutter/material.dart';
 
 class Donation extends StatelessWidget {
-  const Donation({Key? key}) : super(key: key);
-
-class Donation extends StatelessWidget {
   const Donation({super.key});
   
 @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          children: [
-            Image.network(
-              "https://tse3.mm.bing.net/th?id=OIP.xgn6bhRgPCVyXMiXh16bXAAAAA&pid=Api",
-              width: 200,
-              height: 200,
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 5, 230, 230),
+          centerTitle: true,
+          title: Text('Donation',
+          style: TextStyle(color: Colors.black),
+          ),
+          leading:IconButton(
+            icon: Icon(Icons.arrow_back,
+            color: Colors.black,),
+            onPressed: (){},
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-               
-                Text(
-                  'Guava Pineapple Juice',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-               Icon(
+            ),
+            body: Stack(
+          children: [
+            Align(
+              alignment: Alignment.topCenter,
+              child: Image.network(
+                "https://myafricacaribbean.com/cdn/shop/products/image_1080x_af80e0b6-1c57-4d26-855a-1955c0d0c00b.png?v=1630235570",
+                fit: BoxFit.cover,
+                width: 500,
+                height: 300, // Adjust the height as needed
+              ),
+            ),
+            Positioned(
+              top: 250,
+              right: 22,
+              child: IconButton(
+                icon: Icon(
                   Icons.favorite,
                   color: Colors.red,
                   size: 32,
                 ),
-                ],
+                onPressed: () {
+                  // Handle button tap here
+                },
+              ),
             ),
+            Column(
+              children: [
+                 SizedBox(height: 310),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      Text(
+                        'Guava Pineapple Juice',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                      ),
+              ],
+            ),
+           SizedBox(height: 15),
             Text(
               'True Juice, a combination of natural guava pineapple Juice.',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 fontWeight: FontWeight.normal,
               ),
             ),
@@ -68,27 +93,31 @@ class Donation extends StatelessWidget {
                   ),
                   onPressed: () {},
                 ),
-              ],
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
+               ],
+               ),
+
+               SizedBox(height: 20),
+               ElevatedButton(
+               onPressed: () {},
+               style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 5, 230, 230), 
                 fixedSize:Size(200, 50),
-              ),
-              child: Text(
+               ),
+               child: Text(
                 "DONATE",
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 24,),
-              ),
+                ),
+                  ),
+              ],
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-    );
+           ),        
+        );  
   }
 }
   void main(){
     runApp(MaterialApp(
       home: Donation(),
     ));
+  }
