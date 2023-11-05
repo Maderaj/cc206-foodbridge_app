@@ -2,68 +2,40 @@ import 'package:flutter/material.dart';
 
 class Donation extends StatelessWidget {
   const Donation({super.key});
-  
-@override
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 5, 230, 230),
-          centerTitle: true,
-          title: Text('Donation',
-          style: TextStyle(color: Colors.black),
-          ),
-          leading:IconButton(
-            icon: Icon(Icons.arrow_back,
-            color: Colors.black,),
-            onPressed: (){},
-            ),
-            ),
-            body: Stack(
+        body: Column(
           children: [
-            Align(
-              alignment: Alignment.topCenter,
-              child: Image.network(
-                "https://myafricacaribbean.com/cdn/shop/products/image_1080x_af80e0b6-1c57-4d26-855a-1955c0d0c00b.png?v=1630235570",
-                fit: BoxFit.cover,
-                width: 500,
-                height: 300, // Adjust the height as needed
-              ),
+            Image.network(
+              "https://tse3.mm.bing.net/th?id=OIP.xgn6bhRgPCVyXMiXh16bXAAAAA&pid=Api",
+              width: 200,
+              height: 200,
             ),
-            Positioned(
-              top: 250,
-              right: 22,
-              child: IconButton(
-                icon: Icon(
-                  Icons.favorite,
-                  color: Colors.red,
-                  size: 32,
-                ),
-                onPressed: () {
-                  // Handle button tap here
-                },
-              ),
-            ),
-            Column(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                 SizedBox(height: 310),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children:[
-                      Text(
-                        'Guava Pineapple Juice',
+               
+                Text(
+                  'Guava Pineapple Juice',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
-                      ),
-              ],
+                ),
+               Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                  size: 32,
+                ),
+                ],
             ),
-           SizedBox(height: 15),
             Text(
               'True Juice, a combination of natural guava pineapple Juice.',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.normal,
               ),
             ),
@@ -99,20 +71,20 @@ class Donation extends StatelessWidget {
                ElevatedButton(
                onPressed: () {},
                style: ElevatedButton.styleFrom(
+
+
                 backgroundColor: Color.fromARGB(255, 5, 230, 230), 
                 fixedSize:Size(200, 50),
-               ),
-               child: Text(
+              ),
+              child: Text(
                 "DONATE",
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 24,),
-                ),
-                  ),
-              ],
-                ),
-              ],
+              ),
             ),
-           ),        
-        );  
+          ],
+        ),
+      ),
+    );
   }
 }
   void main(){
