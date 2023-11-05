@@ -95,7 +95,6 @@ class Donation extends StatelessWidget {
                 ),
                ],
                ),
-
                SizedBox(height: 20),
                ElevatedButton(
                onPressed: () {},
