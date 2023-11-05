@@ -65,12 +65,14 @@ class Donation extends StatelessWidget {
                   ),
                   onPressed: () {},
                 ),
-              ],
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
+               ],
+               ),
+               SizedBox(height: 20),
+               ElevatedButton(
+               onPressed: () {},
+               style: ElevatedButton.styleFrom(
+
+
                 backgroundColor: Color.fromARGB(255, 5, 230, 230), 
                 fixedSize:Size(200, 50),
               ),
