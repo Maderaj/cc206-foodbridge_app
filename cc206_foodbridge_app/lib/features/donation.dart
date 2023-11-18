@@ -1,3 +1,4 @@
+import 'package:cc206_foodbridge_app/Components/institutions.dart';
 import 'package:flutter/material.dart';
 
 class Donation extends StatelessWidget {
@@ -5,8 +6,9 @@ class Donation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 5, 230, 230),
           centerTitle: true,
@@ -17,7 +19,7 @@ class Donation extends StatelessWidget {
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color: Colors.black,
+              color: const Color.fromARGB(255, 104, 67, 67),
             ),
             onPressed: () {
               // Handle back button press
@@ -106,21 +108,21 @@ class Donation extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {
-                    // Handle donation button tap here
-                  },
+                 onPressed: () => Navigator.pushNamed(context, '/institutions'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 5, 230, 230),
                     fixedSize: Size(200, 50),
                   ),
                   child: Text(
-                    "DONATE",
+                    "Continue",
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
+                      
                     ),
                   ),
+                  
                 ),
               ],
             ),
