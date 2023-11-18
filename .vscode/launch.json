@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "cc206_foodbridge_app",
+            "cwd": "cc206_foodbridge_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "cc206_foodbridge_app (profile mode)",
+            "cwd": "cc206_foodbridge_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "cc206_foodbridge_app (release mode)",
+            "cwd": "cc206_foodbridge_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

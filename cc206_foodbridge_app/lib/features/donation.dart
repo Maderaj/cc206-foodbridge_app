@@ -1,3 +1,4 @@
+import 'package:cc206_foodbridge_app/Components/institutions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +20,8 @@ class _DonationState extends State<Donation> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return DefaultTabController(
+      length: 2,(
       body: Stack(
         children: [
           Align(
@@ -67,13 +69,9 @@ class _DonationState extends State<Donation> {
                   fontSize: 13.8,
                   fontWeight: FontWeight.normal,
                 ),
-                ],
-            ),
-            Text(
-              'True Juice, a combination of natural guava pineapple Juice.',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.normal,
+                onPressed: () {
+                  // Handle button tap here
+                },
               ),
 
               Row(
@@ -110,12 +108,12 @@ class _DonationState extends State<Donation> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  // Handle button tap here
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 5, 230, 230),
-                  fixedSize: Size(200, 50),
+                  SizedBox(height: 20),
+                ElevatedButton(
+                 onPressed: () => Navigator.pushNamed(context, '/institutions'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 5, 230, 230),
+                    fixedSize: Size(200, 50),
                 ),
                 child: Text(
                   "CONTINUE",
@@ -125,8 +123,16 @@ class _DonationState extends State<Donation> {
                     fontSize: 25,
 
                   ),
-                  onPressed: () {},
+                  
                 ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
               ),
             ],
           ),
@@ -171,3 +177,4 @@ class _DonationState extends State<Donation> {
 }
 
             
+
