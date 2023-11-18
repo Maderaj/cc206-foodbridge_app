@@ -106,7 +106,8 @@ class _DonationState extends State<Donation> {
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, '/institutions'),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/institutions'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 5, 230, 230),
                     fixedSize: Size(200, 50),
@@ -160,10 +161,3 @@ class _DonationState extends State<Donation> {
     );
   }
 }
-
-
-     
-
-            
-
-
