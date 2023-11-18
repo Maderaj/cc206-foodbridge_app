@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+class InstitutionsPage extends StatelessWidget {
+  const InstitutionsPage ({Key? key}) : super(key: key);
 
-
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -97,8 +94,21 @@ class Institutions {
 }
 
 List<Institutions> institutions = [
-  Institutions(name: 'Sisters of Mary School Girlstown', imageUrl: 'https://media.licdn.com/dms/image/C5616AQEHCbSFOEwYrA/profile-displaybackgroundimage-shrink_200_800/0/1632462942033?e=2147483647&v=beta&t=kzvR_VBByC23I9hGMcT8F-DjNxc2YAJLCIbpmwXzYYY&fbclid=IwAR0Dv9Rratcv6_sq8v_9N3NTHdphNBpCxfOJxRKmr4f3ttfniddn82EkMPU'),
-  Institutions(name: 'Sisters of Mary School Boystown', imageUrl: 'https://lh5.googleusercontent.com/p/AF1QipMZ5xvnAUjoMH4sMkiVvvicsjqBvd6fUpoKvgKe=w480-h300-k-n'),
-  Institutions(name: 'UNICEF (United Nations International Childrens Emergency Fund)', imageUrl: 'https://static.independent.co.uk/2023/06/07/00/06121340-3bd67067-0745-47b3-94b9-20d80a6b2f1f.jpg'),
-  Institutions(name: 'Gentle Hand Inc.', imageUrl: 'https://lh4.googleusercontent.com/-gmixk84wfQI/TYHLvKf2aVI/AAAAAAAAAOw/ai18PqUViVE/s1600/IMG_8285.jpg'),
+  Institutions(
+    name: 'Sisters of Mary School Girlstown',
+    imageUrl: 'https://media.licdn.com/dms/image/C5616AQEHCbSFOEwYrA/profile-displaybackgroundimage-shrink_200_800/0/1632462942033?e=2147483647&v=beta&t=kzvR_VBByC23I9hGMcT8F-DjNxc2YAJLCIbpmwXzYYY&fbclid=IwAR0Dv9Rratcv6_sq8v_9N3NTHdphNBpCxfOJxRKmr4f3ttfniddn82EkMPU',
+  ),
+  Institutions(
+    name: 'Sisters of Mary School Boystown',
+    imageUrl: 'https://lh5.googleusercontent.com/p/AF1QipMZ5xvnAUjoMH4sMkiVvvicsjqBvd6fUpoKvgKe=w480-h300-k-n',
+  ),
+  Institutions(
+    name: 'UNICEF (United Nations International Childrens Emergency Fund)',
+    imageUrl: 'https://static.independent.co.uk/2023/06/07/00/06121340-3bd67067-0745-47b3-94b9-20d80a6b2f1f.jpg',
+  ),
+  Institutions(
+    name: 'Gentle Hand Inc.',
+    imageUrl: 'https://lh4.googleusercontent.com/-gmixk84wfQI/TYHLvKf2aVI/AAAAAAAAAOw/ai18PqUViVE/s1600/IMG_8285.jpg',
+  ),
 ];
+
