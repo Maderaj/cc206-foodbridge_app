@@ -67,7 +67,15 @@ class _DonationState extends State<Donation> {
                   fontSize: 13.8,
                   fontWeight: FontWeight.normal,
                 ),
+                ],
+            ),
+            Text(
+              'True Juice, a combination of natural guava pineapple Juice.',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.normal,
               ),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -115,7 +123,9 @@ class _DonationState extends State<Donation> {
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
+
                   ),
+                  onPressed: () {},
                 ),
               ),
             ],
@@ -159,3 +169,5 @@ class _DonationState extends State<Donation> {
     );
   }
 }
+
+            
