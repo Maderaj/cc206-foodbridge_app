@@ -19,8 +19,7 @@ class _DonationState extends State<Donation> {
 
   @override
   Widget build(BuildContext context) {
-     return DefaultTabController(
-      length: 2,(
+    return Scaffold(
       body: Stack(
         children: [
           Align(
@@ -68,9 +67,6 @@ class _DonationState extends State<Donation> {
                   fontSize: 13.8,
                   fontWeight: FontWeight.normal,
                 ),
-                onPressed: () {
-                  // Handle button tap here
-                },
               ),
 
               Row(
@@ -107,12 +103,10 @@ class _DonationState extends State<Donation> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                  SizedBox(height: 20),
-                ElevatedButton(
-                 onPressed: () => Navigator.pushNamed(context, '/institutions'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 5, 230, 230),
-                    fixedSize: Size(200, 50),
+                onPressed: () => Navigator.pushNamed(context, '/institutions'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 5, 230, 230),
+                  fixedSize: Size(200, 50),
                 ),
                 child: Text(
                   "CONTINUE",
@@ -120,18 +114,8 @@ class _DonationState extends State<Donation> {
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
-
                   ),
-                  
                 ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
               ),
             ],
           ),
@@ -174,6 +158,3 @@ class _DonationState extends State<Donation> {
     );
   }
 }
-
-            
-

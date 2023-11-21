@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream
-=======
 import 'package:cc206_foodbridge_app/Components/institutions.dart';
 import 'package:cc206_foodbridge_app/Components/Drawer_home.dart';
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:cc206_foodbridge_app/features/donation.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -23,9 +19,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-<<<<<<< Updated upstream
-      home: const Donation(),
-=======
       initialRoute: '/',
       routes: {
         '/': (context) => Donation(),
@@ -33,7 +26,6 @@ class MyApp extends StatelessWidget {
         '/institutions': (context) => InstitutionsPage(),
         '/DrawerHome ': (context) => DrawerHome (),
       },
->>>>>>> Stashed changes
     );
   }
 }
