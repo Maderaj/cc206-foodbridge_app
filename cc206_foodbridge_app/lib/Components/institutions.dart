@@ -65,7 +65,7 @@ class _InstitutionsPageState extends State<InstitutionsPage> {
                   ),
                 ),
                 child: Text(
-                  'Donate',
+                  'DONATE',
                   style: GoogleFonts.archivoNarrow(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -115,26 +115,33 @@ class _InstitutionsPageState extends State<InstitutionsPage> {
   Widget buildInstitutionCard(Institutions institution) {
     return Card(
       elevation: 3.0,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10.0),
-            child: Image.network(
-              institution.imageUrl,
-              height: 160,
-              width: 190,
-              fit: BoxFit.cover,
+      child: InkWell(
+        onTap: () {
+          // Handle the press event for the card here
+          print('Card pressed for ${institution.name}');
+          // You can navigate to a detailed page or perform any other action.
+        },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10.0),
+              child: Image.network(
+                institution.imageUrl,
+                height: 160,
+                width: 190,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          SizedBox(height: 10),
-          Text(
-            institution.name,
-            style: GoogleFonts.archivoNarrow(
-              fontWeight: FontWeight.bold,
+            SizedBox(height: 10),
+            Text(
+              institution.name,
+              style: GoogleFonts.archivoNarrow(
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
