@@ -87,6 +87,14 @@ class _InstitutionsPageState extends State<InstitutionsPage> {
                 _currentIndex = index;
               });
             }
+            if (index == 0) {
+              // If the "Account" icon is pressed, navigate to DrawerHome
+              Navigator.pushNamed(context, '/Donation');
+            } else {
+              setState(() {
+                _currentIndex = index;
+              });
+            }
           },
           selectedItemColor: Colors.lightBlue,
           unselectedItemColor: Colors.blueGrey,
