@@ -1,4 +1,5 @@
 import 'package:cc206_foodbridge_app/Components/institutions.dart';
+import 'package:cc206_foodbridge_app/Components/Drawer_home.dart';
 import 'package:flutter/material.dart';
 import 'package:cc206_foodbridge_app/features/donation.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => Donation(),
         '/Donation': (context) => Donation(),
         '/institutions': (context) => InstitutionsPage(),
+        '/DrawerHome ': (context) => DrawerHome (),
       },
     );
   }
