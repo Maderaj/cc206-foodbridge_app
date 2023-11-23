@@ -1,4 +1,3 @@
-import 'package:cc206_foodbridge_app/Components/institutions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -43,9 +42,6 @@ class _DonationState extends State<Donation> {
                   color: Colors.red,
                   size: 32,
                 ),
-                onPressed: () {
-                  // Handle button tap here
-                },
               ),
             ),
             Column(

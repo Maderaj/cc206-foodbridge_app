@@ -177,6 +177,7 @@ List<Institutions> institutions = [
   ),
 ];
 
+
 void main() {
   runApp(MyApp());
 }
