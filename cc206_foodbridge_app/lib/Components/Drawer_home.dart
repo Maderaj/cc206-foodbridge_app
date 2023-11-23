@@ -1,37 +1,53 @@
 import 'package:flutter/material.dart';
+import 'package:cc206_foodbridge_app/account/profile_post.dart';
+import 'package:cc206_foodbridge_app/account/profile_header.dart';
 
-class DrawerHome extends StatelessWidget {
-  const DrawerHome({Key? key});
+class DrawerHome extends StatefulWidget {
+  const DrawerHome({Key? key}) : super(key: key);
+
+  @override
+  _DrawerHomeState createState() => _DrawerHomeState();
+}
+
+class _DrawerHomeState extends State<DrawerHome> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-      ),
-      body: const Text('DrawerNavigation'),
+     return DefaultTabController(
+      initialIndex: 0,
+      length: 3,
+      child: Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          elevation: 0,
+          leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+          backgroundColor: Color(0xFF1B1B1B),
+          title: Text("Profile"),         
+        ),
       endDrawer: Drawer(
         child: ListView(
-  children: <Widget>[
-    ListTile(
-  leading: const Icon(Icons.menu),
-  onTap: () {
-    Navigator.pushNamed(context, '/DrawerHome');
-  },
-),
-      Column(
-       children: [
-        Padding(
-        padding: const EdgeInsets.only(right: 200),
-        child: Text(
-        'ailen_w',
-        style: TextStyle(
-          fontSize: 18,
-        ),
-      ),
-    ),
-  ],
-),
+          children: <Widget>[
+            ListTile(
+              leading: const Icon(Icons.menu),
+              onTap: () {
+                // Close the drawer when tapped
+                Navigator.pop(context);
+              },
+            ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 200),
+                  child: Text(
+                    'ailen_w',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ],
+            ),
             ListTile(
               leading: const Icon(Icons.account_circle),
               title: const Text('Account'),
@@ -70,6 +86,29 @@ class DrawerHome extends StatelessWidget {
           ],
         ),
       ),
-    );
+      body: NestedScrollView(
+          headerSliverBuilder: (context, value) {
+            return [ProfileHeaderCard()];
+          },
+          body: Column(
+            children: [
+              TabBar(tabs: [
+                Tab(
+                  icon: Icon(Icons.grid_3x3_sharp),
+                ),
+                Tab(
+                  icon: Icon(Icons.account_box_outlined),
+                ),
+              ]),
+              Expanded(
+                child: TabBarView(children: [
+                  ProfilePostPage(),
+                ]),
+              ),
+            ],
+          ),
+        ),
+    ),
+     );
   }
 }
