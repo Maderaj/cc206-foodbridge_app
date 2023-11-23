@@ -42,6 +42,9 @@ class _DonationState extends State<Donation> {
                   color: Colors.red,
                   size: 32,
                 ),
+                onPressed: () {
+                  // Handle favorite button tap here
+                },
               ),
             ),
             Column(
@@ -78,7 +81,7 @@ class _DonationState extends State<Donation> {
                         color: Colors.black,
                       ),
                       onPressed: () {
-                        // Handle button tap here
+                        // Handle remove button tap here
                       },
                     ),
                     Text(
@@ -95,15 +98,16 @@ class _DonationState extends State<Donation> {
                         color: Colors.black,
                       ),
                       onPressed: () {
-                        // Handle button tap here
+                        // Handle add button tap here
                       },
                     ),
                   ],
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () =>
-                      Navigator.pushNamed(context, '/institutions'),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/institutions');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 5, 230, 230),
                     fixedSize: Size(200, 50),
@@ -124,9 +128,14 @@ class _DonationState extends State<Donation> {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
+            if (index == 4) {
+              // If the "Account" icon is pressed, navigate to DrawerHome
+              Navigator.pushNamed(context, '/DrawerHome');
+            } else {
+              setState(() {
+                _currentIndex = index;
+              });
+            }
           },
           selectedItemColor: Colors.lightBlue,
           unselectedItemColor: Colors.blueGrey,

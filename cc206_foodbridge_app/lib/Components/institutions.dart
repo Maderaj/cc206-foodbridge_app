@@ -79,9 +79,14 @@ class _InstitutionsPageState extends State<InstitutionsPage> {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
+            if (index == 4) {
+              // If the "Account" icon is pressed, navigate to DrawerHome
+              Navigator.pushNamed(context, '/DrawerHome');
+            } else {
+              setState(() {
+                _currentIndex = index;
+              });
+            }
           },
           selectedItemColor: Colors.lightBlue,
           unselectedItemColor: Colors.blueGrey,

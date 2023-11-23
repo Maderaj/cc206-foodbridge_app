@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => Donation(),
         '/Donation': (context) => Donation(),
         '/institutions': (context) => InstitutionsPage(),
-        '/DrawerHome ': (context) => DrawerHome (),
+        '/DrawerHome': (context) => DrawerHome(),
       },
     );
   }

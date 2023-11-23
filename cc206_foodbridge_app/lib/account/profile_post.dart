@@ -56,7 +56,24 @@ class ProfilePostPage extends StatelessWidget {
       "imageUrl":
           "https://ph-test-11.slatic.net/p/c485adbb9a323552005abd1906e6ad49.jpg",
       "isVideo": false
-    }, 
+    },
+    {
+      "id": "10",
+      "imageUrl":
+          "https://www.promiselandmart.com/cdn/shop/products/four_seasons_tetra_1200x1200.jpg?v=1630031966",
+      "isVideo": false
+    },
+    {
+      "id": "11",
+      "imageUrl":
+          "https://www.magicstarsupermarket.com/cdn/shop/products/c676154f2b846ec68a3f51b0812eb93a_580x.jpg?v=1590729232",
+      "isVideo": false
+    },
+    {
+      "id": "12",
+      "imageUrl": "https://m.media-amazon.com/images/I/61pYpU3XUjL.jpg",
+      "isVideo": false
+    },
   ];
   @override
   Widget build(BuildContext context) {
