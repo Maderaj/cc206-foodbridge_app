@@ -10,6 +10,7 @@ class InstitutionsPage extends StatefulWidget {
 
 class _InstitutionsPageState extends State<InstitutionsPage> {
   int _currentIndex = 0;
+  int _selectedIndex = -1; // Track selected index
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class _InstitutionsPageState extends State<InstitutionsPage> {
                   ),
                   itemCount: institutions.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return buildInstitutionCard(institutions[index]);
+                    return buildInstitutionCard(institutions[index], index);
                   },
                 ),
               ),
@@ -125,13 +126,20 @@ class _InstitutionsPageState extends State<InstitutionsPage> {
     );
   }
 
-  Widget buildInstitutionCard(Institutions institution) {
+  Widget buildInstitutionCard(Institutions institution, int index) {
+    bool isSelected = _selectedIndex == index;
+
     return Card(
       elevation: 3.0,
+      color: isSelected ? Colors.lightBlue : null, // Change color if selected
       child: InkWell(
         onTap: () {
           // Handle the press event for the card here
           print('Card pressed for ${institution.name}');
+          // Update the selected index
+          setState(() {
+            _selectedIndex = index;
+          });
           // You can navigate to a detailed page or perform any other action.
         },
         child: Column(

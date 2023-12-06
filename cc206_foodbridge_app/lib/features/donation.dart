@@ -16,6 +16,8 @@ class Donation extends StatefulWidget {
 
 class _DonationState extends State<Donation> {
   int _currentIndex = 0;
+  int _quantity = 100; // Initial quantity
+  bool _isFavorited = false;
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +41,14 @@ class _DonationState extends State<Donation> {
               child: IconButton(
                 icon: Icon(
                   Icons.favorite,
-                  color: Colors.red,
+                  color: _isFavorited ? Colors.red : Colors.grey,
                   size: 32,
                 ),
                 onPressed: () {
                   // Handle favorite button tap here
+                  setState(() {
+                    _isFavorited = !_isFavorited;
+                  });
                 },
               ),
             ),
@@ -82,10 +87,15 @@ class _DonationState extends State<Donation> {
                       ),
                       onPressed: () {
                         // Handle remove button tap here
+                        if (_quantity > 1) {
+                          setState(() {
+                            _quantity--;
+                          });
+                        }
                       },
                     ),
                     Text(
-                      '100',
+                      '$_quantity',
                       style: GoogleFonts.fjallaOne(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -99,6 +109,9 @@ class _DonationState extends State<Donation> {
                       ),
                       onPressed: () {
                         // Handle add button tap here
+                        setState(() {
+                          _quantity++;
+                        });
                       },
                     ),
                   ],
